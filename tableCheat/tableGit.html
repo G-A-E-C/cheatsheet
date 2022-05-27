@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="tablaEstilo.css">
+    <title>Cheat Sheet</title>
+</head>
+<style type="text/css">
+
+    table, th, td {
+        border: 1px solid black;
+    }
+    table#tablaGit{
+        width: 100%;
+        background-color: royalblue;
+        padding: 1px;
+    }
+    
+</style>
+
+<body>
+    
+    <h1>Comandos en Git</h1>
+    <div id="encabezado">
+        <ul class="menu">
+            <li><a href="index.html">inicio</a></li>
+            <li><a href="">Comandos</a>
+                <ul>
+                    <li><a href="tableCheat/tableGit.html">Comandos Git</a>
+                    <li><a href="tableCheat/tableGit.html">Comandos Terminal</a>
+                </ul>
+            </li>
+            <li><a href="#">Codigos</a>
+                <ul>
+                    <li><a href="tableCheat/tableGit.html">HTML</a>
+                    <li><a href="tableCheat/tableGit.html">CSS</a>
+                </ul>
+            </li>
+        </ul>
+     </div>
+     <table style="width: 100%" id="tablaGit">
+         <tr>
+             <th>
+                 Nombre
+             </th>
+             <th>
+                 Descripcion
+             </th>
+             <th>
+                 Escritura
+             </th>
+         </tr>
+         <tr>
+            <td>
+                Git configuration
+            </td>
+            <td>
+                Establezca el nombre que se adjuntará a sus comits y tags.
+            </td>
+            <td>
+                $ git config --global user.name “Your Name”
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git init
+            </td>
+            <td>
+                Crear un nuevo repositorio local. Si se proporciona [nombre del proyecto], Git 
+                creará un nuevo directorio con el nombre de [nombre del proyecto] e inicializará un 
+                repositorio dentro de él.
+            </td>
+            <td>
+                $ git init [project name]
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git clone
+            </td>
+            <td>
+                Descarga un proyecto con todo el historial del repositorio remoto
+            </td>
+            <td>
+                $ git clone [project url]
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git add
+            </td>
+            <td>
+                Se usa para agregar archivos al área de preparación. 
+            </td>
+            <td>
+                git add [path]
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git commit
+            </td>
+            <td>
+                Creará una instantánea de los cambios y la guardará en el directorio git.
+            </td>
+            <td>
+                $ git commit "..."
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git status
+            </td>
+            <td>
+                Muestra la lista de los archivos que se han cambiado junto con los archivos que están por ser preparados o confirmados.
+            </td>
+            <td>
+                $ git status
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git push
+            </td>
+            <td>
+                Se usa para enviar confirmaciones locales a la rama maestra del repositorio remoto. 
+            </td>
+            <td>
+                $ git push [--tags] [remote]
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git rebase
+            </td>
+            <td>
+                Se usa para aplicar ciertos cambios de una rama en otra.
+            </td>
+            <td>
+                $ git rebase [base]
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git fsck
+            </td>
+            <td>
+                Realiza una comprobación de integridad del sistema de archivos git e identifica cualquier objeto corrupto
+            </td>
+            <td>
+                $ git fsck [--tags]
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git prune
+            </td>
+            <td>
+                Elimina los objetos que no tengan ningún apuntador entrante.
+            </td>
+            <td>
+                $ git prune [-n] [-v] [--progress]
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git archive
+            </td>
+            <td>
+                Le permite al usuario crear archivos zip o tar que contengan los constituyentes de un solo árbol de repositorio.
+            </td>
+            <td>
+                $ git archive [--format= fmt] [--list]
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git gc
+            </td>
+            <td>
+                Limpiará archivos innecesarios y optimizará el repositorio local.
+            </td>
+            <td>
+                $ git gc [--aggressive] [--auto]
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git instaweb
+            </td>
+            <td>
+                Te permite explorar tu repositorio local en la interfaz GitWeb.
+            </td>
+            <td>
+                $ git instaweb [--local] [--httpd= httpd ] 
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git K
+            </td>
+            <td>
+                Muestra la interfaz gráfica para un repositorio local.
+            </td>
+            <td>
+                $ gitk [ options ] [ revision range ] [--] 
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git grep
+            </td>
+            <td>
+                Le permite al usuario buscar frases y palabras específicas en los árboles de confirmación, el directorio de trabajo y en el área de preparación.
+            </td>
+            <td>
+                $ git grep -n gmtime_r
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git cat-file
+            </td>
+            <td>
+                Se usa para ver la información de tipo y tamaño de un objeto del repositorio. 
+            </td>
+            <td>
+                $ git cat-file type u object
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git ls-tree
+            </td>
+            <td>
+                te permite ver un objeto de árbol junto con el nombre y modo de cada ítem, y el valor blob de SHA-1.
+            </td>
+            <td>
+                $  git ls-tree [-d] [-r] [-t] [-l] [-z]
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git fetch
+            </td>
+            <td>
+                Le permite al usuario buscar todos los objetos de un repositorio remoto que actualmente no se encuentran en el directorio de trabajo local.
+            </td>
+            <td>
+                $ git fetch remote
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git show
+            </td>
+            <td>
+                Se usa para mostrar información sobre cualquier objeto git.
+            </td>
+            <td>
+                $ git show [options] [object]
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git stash
+            </td>
+            <td>
+                Guardará momentáneamente los cambios que no están listos para ser confirmados.
+            </td>
+            <td>
+                $ git stash
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git tag
+            </td>
+            <td>
+                Marca commits específicos. Los desarrolladores lo usan para marcar puntos de lanzamiento como v1.0 y v2.0.
+            </td>
+            <td>
+                $ git tag tagname
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git log
+            </td>
+            <td>
+                Se usa para ver el historial del repositorio listando ciertos detalles de la confirmación.
+            </td>
+            <td>
+                $ git log [options] [revision-range]
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git reset
+            </td>
+            <td>
+                Sirve para resetear el index y el directorio de trabajo al último estado de confirmación.
+            </td>
+            <td>
+                $ git reset --hard HEAD^
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git rm
+            </td>
+            <td>
+                Se puede usar para remover archivos del index y del directorio de trabajo.
+            </td>
+            <td>
+                $ git rm Documentation/
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git diff
+            </td>
+            <td>
+                Se usa para hacer una lista de conflictos.
+            </td>
+            <td>
+                $ git diff [options] [commit]
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git merge
+            </td>
+            <td>
+                Se usa para fusionar una rama con otra rama activa:
+            </td>
+            <td>
+                $ git merge new-feature
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git pull
+            </td>
+            <td>
+                Fusiona todos los cambios que se han hecho en el repositorio remoto con el directorio de trabajo local.
+            </td>
+            <td>
+                $ git pull --no-commit remote
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git branch
+            </td>
+            <td>
+                Se usa para listar, crear o borrar ramas.
+            </td>
+            <td>
+                $ git branch testing
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Git remote
+            </td>
+            <td>
+                Te permite ver todos los repositorios remotos.
+            </td>
+            <td>
+                $ git remote [-v | --verbose]
+            </td>
+         </tr>
+         <tr>   
+            <td>
+                Git checkout
+            </td>
+            <td>
+                Crea ramas y te ayuda a navegar entre ellas.
+            </td>
+            <td>
+                $ git checkout [-q] [-f] [-m] [branch]
+            </td>
+         </tr>
+        </table>
+        <p>Estos comandos son una lista de los mas usados en Git y que te seran de mucha ayuda para tus proyectos:</p>
+</body>
+</html>
