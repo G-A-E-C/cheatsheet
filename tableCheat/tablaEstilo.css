@@ -16,16 +16,12 @@ h1{
 table, th, td {
     border: 1px solid black;
 }
-table#tablaGit{
+table{
     width: 100%;
-    background-color: royalblue;
+    background-color: aqua;
     padding: 1px;
 }
-table#tablaTerminal{
-    width: 100%;
-    background-color: #C9D1D3;
-    padding: 1px;
-}
+
 #encabezado{
     margin: auto;
     width: 50%;
